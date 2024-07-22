@@ -12,15 +12,25 @@ define('HARGA_JACKET', 50000);
 // total harga sebelum diskon
 $total = (HARGA_STICKER * $sticker) + (HARGA_KAOS * $kaos) + (HARGA_JACKET * $jacket);
 
-// diskon tetap 12%
-$diskon = 0.12 * $total;
-$pesan_diskon = '12%';
+// diskon acak antara 5% hingga 20%
+$diskon_persen = rand(5, 20) / 100; // menghasilkan angka diskon acak
+$diskon = $diskon_persen * $total;
+$pesan_diskon = ($diskon_persen * 100) . '%';
 
 // subtotal setelah diskon
 $subtotal = $total - $diskon;
 
-// tulis ke file, mode yang digunakan adalah 'a' = append
-$fp = fopen("faktur.txt", "a");
+// nama file faktur
+$filename = "faktur.txt";
+
+// hapus file jika sudah ada
+if (file_exists($filename)) {
+    unlink($filename);
+}
+
+// tulis ke file, mode yang digunakan adalah 'w' = write
+$fp = fopen($filename, "w");
+fwrite($fp, "=====================================\n");
 fwrite($fp, "Data Faktur Pembelian: \n");
 fwrite($fp, "Harga Stiker: Rp." . (HARGA_STICKER * $sticker) . ",-\n");
 fwrite($fp, "Harga Kaos: Rp." . (HARGA_KAOS * $kaos) . ",-\n");
@@ -83,6 +93,7 @@ fclose($fp);
     </style>
 </head>
 <body>
+    <center>
     <h2>NOTED ONLINE STORE DATA PEMBELIAN</h2>
     <table>
         <tr><th>Item</th><th>Harga</th><th>Qty</th><th>Total</th></tr>

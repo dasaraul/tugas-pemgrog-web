@@ -39,6 +39,7 @@
     </style>
 </head>
 <body>
+    <center>
     <h2>Data Faktur Pembelian</h2>
     <pre>
     <?php
