@@ -7,8 +7,10 @@
     <link rel="icon" href="https://i.pinimg.com/736x/06/9e/b6/069eb6fc2c6875ea77c687c73a5de5f0.jpg">
     <style>
         body {
+            /* Mengatur background agar tidak bergerak saat di-scroll */
             background-image: url('https://images7.alphacoders.com/137/thumb-1920-1370259.png');
-            background-size: cover;
+            background-size: cover; /* Mengatur background agar fit dan tidak terpotong */
+            background-attachment: fixed; /* Menjaga background tetap diam saat scrolling */
             background-position: center;
             font-family: Arial, sans-serif;
             color: white;
@@ -17,7 +19,7 @@
             padding: 0;
         }
         table {
-            width: 70%;
+            width: 60%; /* Mengatur lebar tabel agar tidak terlalu lebar */
             margin: 100px auto;
             border-collapse: collapse;
             background-color: rgba(73, 71, 71, 0.3);
@@ -41,6 +43,7 @@
 </head>
 <body>
     <h1>Daftar Projek Pertemuan</h1>
+    <!-- Membuat tabel dengan tautan ke pertemuan-pertemuan -->
     <table>
         <tr><td><a href="pertemuan1/">Pertemuan 1</a></td></tr>
         <tr><td><a href="pertemuan2/">Pertemuan 2</a></td></tr>
