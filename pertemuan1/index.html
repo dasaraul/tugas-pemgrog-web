@@ -3,80 +3,106 @@
 <head>
     <title>Latihan Tabel</title>
     <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
+        body {
+            background-image: url('https://images3.alphacoders.com/132/thumb-1920-1323165.png');
+            background-size: cover; /* Biar gambar latar belakang nutup seluruh layar */
+            background-attachment: fixed; /* Gambar latar belakang tetap saat digulir */
+            background-position: center; /* Biar gambar di tengah */
+            color: #333; /* Warna teks supaya gampang dibaca */
+            margin: 0; /* Hilangkan margin default */
+            padding: 0; /* Hilangkan padding default */
+            display: flex; /* Pakai flexbox untuk pusatkan konten */
+            justify-content: center; /* Pusatkan konten horizontal */
+            align-items: center; /* Pusatkan konten vertikal */
+            height: 100vh; /* Biar tinggi body sesuai tinggi layar */
         }
-        .row1 { background-color: green; }
-        .row2 { background-color: yellow; }
-        .row3 { background-color: red; }
-        .row4 { background-color: blue; }
+        .table-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan */
+            padding: 15px; /* Jarak di sekitar tabel */
+            border-radius: 8px; /* Sudut tabel melengkung */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2); /* Bayangan tabel biar kelihatan lebih 3D */
+        }
+        table, th, td {
+            border: 1px solid #ddd; /* Border tabel yang lembut */
+            border-collapse: collapse; /* Gabungin border tabel */
+            padding: 8px; /* Jarak di dalam sel tabel */
+            text-align: left; /* Teks di dalam tabel rata kiri */
+        }
+        th {
+            background-color: #f4f4f4; /* Warna latar belakang header tabel */
+        }
+        .row1 { background-color: rgba(230, 247, 255, 0.8); } /* Biru muda semi-transparan */
+        .row2 { background-color: rgba(242, 242, 242, 0.8); } /* Abu-abu muda semi-transparan */
+        .row3 { background-color: rgba(230, 255, 230, 0.8); } /* Hijau muda semi-transparan */
+        .row4 { background-color: rgba(255, 244, 230, 0.8); } /* Oranye muda semi-transparan */
+        caption {
+            font-weight: bold; /* Bikin caption tabel jadi tebal */
+            margin: 10px 0; /* Jarak di atas dan bawah caption tabel */
+        }
     </style>
 </head>
 <body>
-    <center>
+    <div class="table-container">
+        <h3>Pertemuan 1 - HADI WIJAYA KUSUMA</h3>
 
-<h3>Pertemuan 1 - HADI WIJAYA KUSUMA</h3>
+        <p>1. Buat Tabel:</p>
+        <table>
+            <tr>
+                <th>Nomor</th>
+                <th>Nama</th>
+            </tr>
+            <tr class="row1">
+                <td>1</td>
+                <td>Ali Nurdin</td>
+            </tr>
+            <tr class="row2">
+                <td>2</td>
+                <td>Siti Maryam</td>
+            </tr>
+            <tr class="row3">
+                <td>3</td>
+                <td>Inneke Koeherawati</td>
+            </tr>
+            <tr class="row4">
+                <td>4</td>
+                <td>Ikke Nurjanah</td>
+            </tr>
+        </table>
 
-<p>1. Buat Tabel:</p>
-<table>
-    <tr>
-        <th>Nomor</th>
-        <th>Nama</th>
-    </tr>
-    <tr class="row1">
-        <td>1</td>
-        <td>Ali Nurdin</td>
-    </tr>
-    <tr class="row2">
-        <td>2</td>
-        <td>Siti Maryam</td>
-    </tr>
-    <tr class="row3">
-        <td>3</td>
-        <td>Inneke Koeherawati</td>
-    </tr>
-    <tr class="row4">
-        <td>4</td>
-        <td>Ikke Nurjanah</td>
-    </tr>
-</table>
-
-<p>3. Buat tabel untuk teks di bawah ini:</p>
-<table>
-    <caption>TABEL NILAI MATA KULIAH DESAIN WEB<br>PRODI PENDIDIKAN MATEMATIKA OFF B-B</caption>
-    <tr>
-        <th>NIM</th>
-        <th>NAMA MAHASISWA</th>
-        <th>NILAI</th>
-        <th>N. HURUF</th>
-    </tr>
-    <tr>
-        <td>123</td>
-        <td>NOVI</td>
-        <td>95</td>
-        <td>A</td>
-    </tr>
-    <tr>
-        <td>234</td>
-        <td>RIZKY</td>
-        <td>98</td>
-        <td>A</td>
-    </tr>
-    <tr>
-        <td>345</td>
-        <td>IMAM</td>
-        <td>100</td>
-        <td>A</td>
-    </tr>
-    <tr>
-        <td>456</td>
-        <td>GOGON</td>
-        <td>70</td>
-        <td>B</td>
-    </tr>
-</table>
-
+        <p>3. Buat tabel untuk teks di bawah ini:</p>
+        <table>
+            <caption>TABEL NILAI MATA KULIAH DESAIN WEB<br>PRODI PENDIDIKAN MATEMATIKA OFF B-B</caption>
+            <tr>
+                <th>NIM</th>
+                <th>NAMA MAHASISWA</th>
+                <th>NILAI</th>
+                <th>N. HURUF</th>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>NOVI</td>
+                <td>95</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>234</td>
+                <td>RIZKY</td>
+                <td>98</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>345</td>
+                <td>IMAM</td>
+                <td>100</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>456</td>
+                <td>GOGON</td>
+                <td>70</td>
+                <td>B</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
