@@ -45,8 +45,8 @@
             <p>Hasilnya:</p>
             <p>
                 <?php
-                $nama = "John";
-                $umur = 25;
+                $nama = "Jaya";
+                $umur = 19;
                 echo "Nama: " . $nama . ", Umur: " . $umur;
                 ?>
             </p>
@@ -60,7 +60,6 @@
                 define("PI", 3.14);<br>
                 $angka = 10; // integer<br>
                 $desimal = 10.5; // float<br>
-                $teks = "Halo"; // string<br>
                 $benar = true; // boolean<br>
                 echo "PI: " . PI;<br>
                 ?&gt;
@@ -245,8 +244,8 @@
             <p>Hasilnya:</p>
             <p>
                 <?php
-                $a = "Halo";
-                $b = "Dunia";
+                $a = "JAWA";
+                $b = "NICH";
                 echo $a . " " . $b;
                 ?>
             </p>
