@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Control Structures</title>
+    <title>Struktur Kontrol PHP</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,124 +66,124 @@
 
 <section class="container">
     <?php
-    // if else example
-    $a = 5;
-    echo "<h2>If Else Example</h2>";
-    echo "<code>Value of a is \$a<br>";
-    if ($a > 10) {
-        echo "a is greater than 10<br>";
+    // contoh if else
+    $nilaiA = 5;
+    echo "<h2>Contoh If Else</h2>";
+    echo "<code>Nilai dari a adalah \$nilaiA<br>";
+    if ($nilaiA > 10) {
+        echo "a lebih besar dari 10<br>";
     } else {
-        echo "a is not greater than 10<br>";
+        echo "a tidak lebih besar dari 10<br>";
     }
     echo "</code>";
     echo "<code>
-    \$a = 5;\n
-    if (\$a > 10) {\n
-        echo \"a is greater than 10\";\n
+    \$nilaiA = 5;\n
+    if (\$nilaiA > 10) {\n
+        echo \"a lebih besar dari 10\";\n
     } else {\n
-        echo \"a is not greater than 10\";\n
+        echo \"a tidak lebih besar dari 10\";\n
     }
     </code>";
 
-    // do while example
-    echo "<h2>Do While Example</h2>";
-    $b = 0;
+    // contoh do while
+    echo "<h2>Contoh Do While</h2>";
+    $nilaiB = 0;
     echo "<code>";
     do {
-        echo "Value of b is $b<br>";
-        $b++;
-    } while ($b < 5);
+        echo "Nilai dari b adalah $nilaiB<br>";
+        $nilaiB++;
+    } while ($nilaiB < 5);
     echo "</code>";
     echo "<code>
-    \$b = 0;\n
+    \$nilaiB = 0;\n
     do {\n
-        echo \"Value of b is \$b<br>\";\n
-        \$b++;\n
-    } while (\$b < 5);
+        echo \"Nilai dari b adalah \$nilaiB<br>\";\n
+        \$nilaiB++;\n
+    } while (\$nilaiB < 5);
     </code>";
 
-    // switch case example
-    echo "<h2>Switch Case Example</h2>";
-    $day = 3;
+    // contoh switch case
+    echo "<h2>Contoh Switch Case</h2>";
+    $hari = 3;
     echo "<code>";
-    switch ($day) {
+    switch ($hari) {
         case 1:
-            echo "Today is Monday<br>";
+            echo "Hari ini adalah Senin<br>";
             break;
         case 2:
-            echo "Today is Tuesday<br>";
+            echo "Hari ini adalah Selasa<br>";
             break;
         case 3:
-            echo "Today is Wednesday<br>";
+            echo "Hari ini adalah Rabu<br>";
             break;
         case 4:
-            echo "Today is Thursday<br>";
+            echo "Hari ini adalah Kamis<br>";
             break;
         case 5:
-            echo "Today is Friday<br>";
+            echo "Hari ini adalah Jumat<br>";
             break;
         default:
-            echo "It's the weekend<br>";
+            echo "Akhir pekan<br>";
             break;
     }
     echo "</code>";
     echo "<code>
-    \$day = 3;\n
-    switch (\$day) {\n
+    \$hari = 3;\n
+    switch (\$hari) {\n
         case 1:\n
-            echo \"Today is Monday\";\n
+            echo \"Hari ini adalah Senin\";\n
             break;\n
         case 2:\n
-            echo \"Today is Tuesday\";\n
+            echo \"Hari ini adalah Selasa\";\n
             break;\n
         case 3:\n
-            echo \"Today is Wednesday\";\n
+            echo \"Hari ini adalah Rabu\";\n
             break;\n
         case 4:\n
-            echo \"Today is Thursday\";\n
+            echo \"Hari ini adalah Kamis\";\n
             break;\n
         case 5:\n
-            echo \"Today is Friday\";\n
+            echo \"Hari ini adalah Jumat\";\n
             break;\n
         default:\n
-            echo \"It's the weekend\";\n
+            echo \"Akhir pekan\";\n
             break;\n
     }
     </code>";
 
-    // elseif example
-    echo "<h2>Elseif Example</h2>";
-    $c = 20;
+    // contoh elseif
+    echo "<h2>Contoh Elseif</h2>";
+    $nilaiC = 20;
     echo "<code>";
-    if ($c < 10) {
-        echo "c is less than 10<br>";
-    } elseif ($c > 10 && $c < 30) {
-        echo "c is between 10 and 30<br>";
+    if ($nilaiC < 10) {
+        echo "c kurang dari 10<br>";
+    } elseif ($nilaiC > 10 && $nilaiC < 30) {
+        echo "c antara 10 dan 30<br>";
     } else {
-        echo "c is greater than or equal to 30<br>";
+        echo "c lebih besar atau sama dengan 30<br>";
     }
     echo "</code>";
     echo "<code>
-    \$c = 20;\n
-    if (\$c < 10) {\n
-        echo \"c is less than 10\";\n
-    } elseif (\$c > 10 && \$c < 30) {\n
-        echo \"c is between 10 and 30\";\n
+    \$nilaiC = 20;\n
+    if (\$nilaiC < 10) {\n
+        echo \"c kurang dari 10\";\n
+    } elseif (\$nilaiC > 10 && \$nilaiC < 30) {\n
+        echo \"c antara 10 dan 30\";\n
     } else {\n
-        echo \"c is greater than or equal to 30\";\n
+        echo \"c lebih besar atau sama dengan 30\";\n
     }
     </code>";
 
-    // for loop example
-    echo "<h2>For Loop Example</h2>";
+    // contoh for loop
+    echo "<h2>Contoh For Loop</h2>";
     echo "<code>";
     for ($i = 0; $i < 5; $i++) {
-        echo "Value of i is $i<br>";
+        echo "Nilai dari i adalah $i<br>";
     }
     echo "</code>";
     echo "<code>
     for (\$i = 0; \$i < 5; \$i++) {\n
-        echo \"Value of i is \$i<br>\";\n
+        echo \"Nilai dari i adalah \$i<br>\";\n
     }
     </code>";
     ?>
