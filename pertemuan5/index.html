@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Header Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        #wrapper {
+            margin: auto;
+            width: 750px;
+            border: 1px solid red;
+        }
+
+        #header {
+            background-image: url('https://i.pinimg.com/736x/99/fb/62/99fb6248b2083941015425d4ae596ab3.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border: 1px solid blue;
+        }
+
+        #header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: rgb(155, 155, 155);
+        }
+
+        #header p {
+            font-size: 1.2em;
+        }
+
+        #inner {
+            float: left;
+            margin: 5px 0;
+            border: 1px solid black;
+        }
+
+        #sidebar {
+            float: left;
+            margin-right: 20px;
+            width: 180px;
+            height: 330px;
+            border: 1px solid red;
+        }
+
+        #content {
+            float: left;
+            width: 544px;
+            height: 330px;
+            border: 1px solid green;
+        }
+
+        #footer {
+            clear: both;
+            height: 50px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div>
+                <h1>Hadi Wijaya Web</h1>
+                <p>Stay Safe lurr</p>
+            </div>
+        </header>
+        <div id="inner">
+            <aside id="sidebar">
+                <!-- Sidebar content here -->
+                <center>TEST INI SIDEBAR
+            </aside>
+            <section id="content">
+                <!-- Main content here -->
+                <center>TEST INI MAIN NYA
+            </section>
+        </div>
+        <footer id="footer">
+            <!-- Footer content here -->
+            <center>TEST INI FOOTER WIR
+        </footer>
+    </div>
+</body>
+</html>

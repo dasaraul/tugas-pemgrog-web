@@ -1,0 +1,32 @@
+Data Faktur Pembelian: 
+Harga Stiker: Rp.22500,-
+Harga Kaos: Rp.350000,-
+Harga Jacket: Rp.50000,-
+Diskon: 12%
+SUBTOTAL: Rp.371800,-
+=====================================
+
+Data Faktur Pembelian: 
+Harga Stiker: Rp.22500,-
+Harga Kaos: Rp.105000,-
+Harga Jacket: Rp.300000,-
+Diskon: 12%
+SUBTOTAL: Rp.376200,-
+=====================================
+
+Data Faktur Pembelian: 
+Harga Stiker: Rp.67500,-
+Harga Kaos: Rp.350000,-
+Harga Jacket: Rp.450000,-
+Diskon: 12%
+SUBTOTAL: Rp.763400,-
+=====================================
+
+Data Faktur Pembelian: 
+Harga Stiker: Rp.75000,-
+Harga Kaos: Rp.105000,-
+Harga Jacket: Rp.450000,-
+Diskon: 12%
+SUBTOTAL: Rp.554400,-
+=====================================
+

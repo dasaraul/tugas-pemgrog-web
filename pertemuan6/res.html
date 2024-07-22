@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Form Result</h2>
+        <div class="form-group">
+            <label>Nama:</label>
+            <span id="resultName"></span>
+        </div>
+        <div class="form-group">
+            <label>Alamat:</label>
+            <span id="resultAddress"></span>
+        </div>
+        <div class="form-group">
+            <label>Kode Pos:</label>
+            <span id="resultPostalCode"></span>
+        </div>
+        <div class="form-group">
+            <label>Jenis Kelamin:</label>
+            <span id="resultGender"></span>
+        </div>
+        <div class="form-group">
+            <label>Username:</label>
+            <span id="resultUsername"></span>
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <span id="resultPassword"></span>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <span id="resultEmail"></span>
+        </div>
+    </div>
+    <script>
+        document.getElementById('resultName').textContent = new URLSearchParams(window.location.search).get('name');
+        document.getElementById('resultAddress').textContent = new URLSearchParams(window.location.search).get('address');
+        document.getElementById('resultPostalCode').textContent = new URLSearchParams(window.location.search).get('postalCode');
+        document.getElementById('resultGender').textContent = new URLSearchParams(window.location.search).get

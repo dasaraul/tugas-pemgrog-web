@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Formulir Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #999999;
+            margin: 0;
+            padding: 0;
+        }
+        .result-container {
+            width: 50%;
+            margin: auto;
+            background-color: #e2e2e2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .result-container h1 {
+            text-align: center;
+        }
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .result-table, .result-table th, .result-table td {
+            border: 1px solid #ddd;
+        }
+        .result-table th, .result-table td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Hasil Data Mahasiswa</h1>
+        <table class="result-table">
+            <tr>
+                <th>NPM</th>
+                <td id="result-nim"></td>
+            </tr>
+            <tr>
+                <th>Nama Lengkap</th>
+                <td id="result-nama"></td>
+            </tr>
+            <tr>
+                <th>Agama</th>
+                <td id="result-agama"></td>
+            </tr>
+            <tr>
+                <th>Jenis Kelamin</th>
+                <td id="result-kelamin"></td>
+            </tr>
+            <tr>
+                <th>Hobi</th>
+                <td id="result-hobi"></td>
+            </tr>
+            <tr>
+                <th>Komentar</th>
+                <td id="result-komentar"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ambil data dari localStorage
+            var nim = localStorage.getItem('nim');
+            var nama = localStorage.getItem('nama');
+            var agama = localStorage.getItem('agama');
+            var kelamin = localStorage.getItem('kelamin');
+            var hobi = JSON.parse(localStorage.getItem('hobi'));
+            var komentar = localStorage.getItem('komentar');
+
+            // Tampilkan data di tabel
+            document.getElementById('result-nim').textContent = nim;
+            document.getElementById('result-nama').textContent = nama;
+            document.getElementById('result-agama').textContent = agama;
+            document.getElementById('result-kelamin').textContent = kelamin;
+            document.getElementById('result-hobi').textContent = hobi.join(', ');
+            document.getElementById('result-komentar').textContent = komentar;
+        });
+    </script>
+</body>
+</html>
