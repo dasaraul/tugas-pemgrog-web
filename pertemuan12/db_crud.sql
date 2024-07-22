@@ -24,10 +24,11 @@ CREATE TABLE IF NOT EXISTS `siswa` (
   `siswa_id` int(11) NOT NULL AUTO_INCREMENT,
   `siswa_nis` int(20) NOT NULL,
   `siswa_nama` varchar(50) NOT NULL,
-  `siswa_kelas` varchar(10) NOT NULL,
+  `siswa_fakultas` varchar(10) NOT NULL,
   `siswa_jurusan` varchar(30) NOT NULL,
+  `siswa_alamat` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`siswa_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- Data exporting was unselected.
 

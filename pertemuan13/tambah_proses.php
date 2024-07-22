@@ -10,7 +10,7 @@ if(isset($_POST['tambah'])){
     $jurusan = $_POST['jurusan'];
 
     // Query untuk menambahkan data ke dalam tabel siswa
-    $query = mysqli_query($koneksi, "INSERT INTO siswa (siswa_nis, siswa_nama, siswa_kelas, siswa_jurusan) VALUES ('$nis', '$nama', '$kelas', '$jurusan')") or die(mysqli_error($koneksi));
+    $query = mysqli_query($koneksi, "INSERT INTO siswa (siswa_nis, siswa_nama, siswa_fakultas, siswa_jurusan) VALUES ('$nis', '$nama', '$kelas', '$jurusan')") or die(mysqli_error($koneksi));
 
     if($query){
         echo 'Data berhasil ditambahkan! ';

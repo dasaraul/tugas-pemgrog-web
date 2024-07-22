@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PEMROGRAMAN WEB</title>
+    <title>TUGAS 2 - Pertemuan ke-12</title>
 </head>
 <body>
-    <h2>MEMBUAT CONTOH PERINTAH CRUD PADA PEMROGRAMAN WEB</h2>
+    <center>
+    <h2>CRUD SIMPLE PADA PERTEMUAN 12</h2>
     <a href="index.php">Beranda</a> | <a href="tambah.php">Tambah Data</a>
     <h3>Data Siswa</h3>
     <table cellpadding="5" cellspacing="0" border="1">
@@ -13,15 +14,16 @@
             <th>NIS</th>
             <th>Nama Lengkap</th>
             <th>Jenis Kelamin</th>
-            <th>Telepon</th>
-            <th>Opsi</th>
+            <th>Fakultas</th>
+            <th>Alamat</th> <!-- Baru nih jam 1.40am di tambahin -->
+            <th>Aksi</th>
         </tr>
         
         <?php
         // Include file koneksi ke database
         include 'konek.php';
         
-        // Query ke database dg SELECT table siswa diurutkan berdasarkan NIS paling besar
+        // Query ke database dg SELECT dari tabel siswa dan siswa_alamat dengan JOIN
         $query = mysqli_query($koneksi, "SELECT * FROM siswa ORDER BY siswa_nis DESC") or die(mysqli_error($koneksi));
         
         // Jika query menghasilkan nilai > 0 maka menjalankan script di bawah if
@@ -35,7 +37,8 @@
                 echo '<td>'.$no.'</td>'; // Menampilkan nomor urut
                 echo '<td>'.$data['siswa_nis'].'</td>'; // Menampilkan data nis dari database
                 echo '<td>'.$data['siswa_nama'].'</td>'; // Menampilkan data nama lengkap dari database
-                echo '<td>'.$data['siswa_kelas'].'</td>'; // Menampilkan data kelas dari database
+                echo '<td>'.$data['siswa_alamat'].'</td>'; // Menampilkan data alamat dari tabel siswa_alamat
+                echo '<td>'.$data['siswa_fakultas'].'</td>'; // Menampilkan data kelas dari database
                 echo '<td>'.$data['siswa_jurusan'].'</td>'; // Menampilkan data jurusan dari database
                 echo '<td><a href="edit.php?id='.$data['siswa_id'].'">Edit</a> | <a href="hapus.php?id='.$data['siswa_id'].'" onclick="return confirm(\'Yakin?\')">Hapus</a></td>'; // Menampilkan opsi edit dan hapus
                 echo '</tr>';

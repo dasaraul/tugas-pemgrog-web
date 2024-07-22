@@ -48,7 +48,7 @@ if(isset($_GET['id'])){
             <tr>
                 <td>Kelas</td>
                 <td>:</td>
-                <td><input type="text" name="kelas" value="<?php echo $data['siswa_kelas']; ?>" required></td>
+                <td><input type="text" name="kelas" value="<?php echo $data['siswa_fakultas']; ?>" required></td>
             </tr>
             <tr>
                 <td>Jurusan</td>

@@ -26,10 +26,11 @@ if(isset($_GET['id'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit Data Siswa</title>
+    <title>Edit Data Mahasiswa</title>
 </head>
 <body>
-    <h2>Edit Data Siswa</h2>
+    <center>
+    <h2>Edit Data Mahasiswa</h2>
     <p><a href="index.php">Beranda</a> / <a href="edit.php">Edit Data</a></p>
     
     <form action="edit_proses.php" method="post">
@@ -46,9 +47,14 @@ if(isset($_GET['id'])){
                 <td><input type="text" name="nama" value="<?php echo $data['siswa_nama']; ?>" required></td>
             </tr>
             <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><input type="text" name="alamat" value="<?php echo $data['siswa_alamat']; ?>" required></td>
+            </tr>
+            <tr>
                 <td>Kelas</td>
                 <td>:</td>
-                <td><input type="text" name="kelas" value="<?php echo $data['siswa_kelas']; ?>" required></td>
+                <td><input type="text" name="kelas" value="<?php echo $data['siswa_fakultas']; ?>" required></td>
             </tr>
             <tr>
                 <td>Jurusan</td>

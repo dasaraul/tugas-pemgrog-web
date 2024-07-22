@@ -6,11 +6,12 @@ include 'konek.php';
 if(isset($_POST['tambah'])){
     $nis = $_POST['nis'];
     $nama = $_POST['nama'];
-    $kelas = $_POST['kelas'];
+    $alamat = $_POST['alamat'];
+    $fakultas = $_POST['fakultas'];
     $jurusan = $_POST['jurusan'];
 
     // Query untuk menambahkan data ke dalam tabel siswa
-    $query = mysqli_query($koneksi, "INSERT INTO siswa (siswa_nis, siswa_nama, siswa_kelas, siswa_jurusan) VALUES ('$nis', '$nama', '$kelas', '$jurusan')") or die(mysqli_error($koneksi));
+    $query = mysqli_query($koneksi, "INSERT INTO siswa (siswa_nis, siswa_nama, siswa_alamat, siswa_fakultas, siswa_jurusan) VALUES ('$nis', '$nama', '$alamat', '$fakultas', '$jurusan')") or die(mysqli_error($koneksi));
 
     if($query){
         echo 'Data berhasil ditambahkan! ';

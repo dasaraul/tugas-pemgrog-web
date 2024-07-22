@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Data Siswa</title>
+    <title>Tambah Data Mahasiswa</title>
 </head>
 <body>
-    <h2>Tambah Data Siswa</h2>
+    <center>
+    <h2>Tambah Data Mahasiswa</h2>
     <p><a href="index.php">Beranda</a> / <a href="tambah.php">Tambah Data</a></p>
     
     <form action="tambah_proses.php" method="post">
@@ -18,6 +19,11 @@
                 <td>Nama Lengkap</td>
                 <td>:</td>
                 <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><input type="text" name="alamat" required></td>
             </tr>
             <tr>
                 <td>Kelas</td>

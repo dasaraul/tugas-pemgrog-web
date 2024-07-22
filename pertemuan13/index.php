@@ -35,7 +35,7 @@
                 echo '<td>'.$no.'</td>'; // Menampilkan nomor urut
                 echo '<td>'.$data['siswa_nis'].'</td>'; // Menampilkan data nis dari database
                 echo '<td>'.$data['siswa_nama'].'</td>'; // Menampilkan data nama lengkap dari database
-                echo '<td>'.$data['siswa_kelas'].'</td>'; // Menampilkan data kelas dari database
+                echo '<td>'.$data['siswa_fakultas'].'</td>'; // Menampilkan data kelas dari database
                 echo '<td>'.$data['siswa_jurusan'].'</td>'; // Menampilkan data jurusan dari database
                 echo '<td><a href="edit.php?id='.$data['siswa_id'].'">Edit</a> | <a href="hapus.php?id='.$data['siswa_id'].'" onclick="return confirm(\'Yakin?\')">Hapus</a></td>'; // Menampilkan opsi edit dan hapus
                 echo '</tr>';

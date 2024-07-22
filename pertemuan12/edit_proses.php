@@ -7,11 +7,12 @@ if(isset($_POST['edit'])){
     $id = $_POST['id'];
     $nis = $_POST['nis'];
     $nama = $_POST['nama'];
+    $alamat = $_POST['alamat'];
     $kelas = $_POST['kelas'];
     $jurusan = $_POST['jurusan'];
 
     // Query untuk mengupdate data siswa berdasarkan ID
-    $query = mysqli_query($koneksi, "UPDATE siswa SET siswa_nis='$nis', siswa_nama='$nama', siswa_kelas='$kelas', siswa_jurusan='$jurusan' WHERE siswa_id='$id'") or die(mysqli_error($koneksi));
+    $query = mysqli_query($koneksi, "UPDATE siswa SET siswa_nis='$nis', siswa_nama='$nama', siswa_alamat='$alamat', siswa_fakultas='$kelas', siswa_jurusan='$jurusan' WHERE siswa_id='$id'") or die(mysqli_error($koneksi));
 
     if($query){
         echo 'Data berhasil diupdate! ';
