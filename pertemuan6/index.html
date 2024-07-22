@@ -5,27 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Background gambar untuk seluruh halaman */
+        body {
+            background-image: url('https://images3.alphacoders.com/131/thumb-1920-1319293.jpeg');
+            background-size: cover; /* Biar gambar nge-full cover layar */
+            background-position: center; /* Biar gambar center */
+            background-repeat: no-repeat; /* Jangan sampe gambar diulang */
+            font-family: Arial, sans-serif; /* Font yang dipakai */
+        }
+        
+        /* Styling untuk container form */
+        .container {
+            display: flex;
+            justify-content: center; /* Biar formnya center */
+            align-items: center; /* Biar formnya vertically center */
+            height: 100vh; /* Biarkan container tingginya 100% viewport */
+        }
+
+        /* Styling untuk wrapper form */
+        .form-wrapper {
+            background: rgba(255, 255, 255, 0.8); /* Background putih dengan opacity */
+            padding: 20px; /* Spasi di dalam form */
+            border-radius: 8px; /* Biar sudut-sudut formnya melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow untuk efek 3D */
+            width: 100%; /* Biarkan form lebarnya 100% dari container */
+            max-width: 500px; /* Lebar maksimal form */
+        }
+
+        /* Styling untuk setiap grup input form */
+        .form-group {
+            margin-bottom: 15px; /* Spasi antar grup input */
+        }
+
+        /* Styling untuk label input */
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Styling untuk input field */
+        .form-group input,
+        .form-group select {
+            width: 100%; /* Lebar input 100% dari container form-group */
+            padding: 8px;
+            border: 1px solid #ccc; /* Border abu-abu untuk input */
+            border-radius: 4px; /* Biar sudut-sudut inputnya melengkung */
+        }
+
+        /* Styling untuk pesan error */
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        /* Styling untuk tombol submit */
+        #submitButton {
+            background-color: #007BFF; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer; /* Ubah cursor jadi pointer saat hover */
+        }
+
+        /* Styling untuk pesan sukses */
+        .success {
+            color: green;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="form-wrapper">
             <h2>Form Validation</h2>
             <form id="form" action="res.html" method="GET">
+                <!-- Grup input untuk nama -->
                 <div class="form-group">
                     <label for="name">Nama</label>
                     <input type="text" id="name" name="name" required>
                     <div class="error" id="nameError"></div>
                 </div>
+                <!-- Grup input untuk alamat -->
                 <div class="form-group">
                     <label for="address">Alamat</label>
                     <input type="text" id="address" name="address" required>
                     <div class="error" id="addressError"></div>
                 </div>
+                <!-- Grup input untuk kode pos -->
                 <div class="form-group">
                     <label for="postalCode">Kode Pos</label>
                     <input type="text" id="postalCode" name="postalCode" required>
                     <div class="error" id="postalCodeError"></div>
                 </div>
+                <!-- Grup input untuk jenis kelamin -->
                 <div class="form-group">
                     <label for="gender">Jenis Kelamin</label>
                     <select id="gender" name="gender" required>
@@ -35,22 +110,27 @@
                     </select>
                     <div class="error" id="genderError"></div>
                 </div>
+                <!-- Grup input untuk username -->
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
                     <div class="error" id="usernameError"></div>
                 </div>
+                <!-- Grup input untuk password -->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                     <div class="error" id="passwordError"></div>
                 </div>
+                <!-- Grup input untuk email -->
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                     <div class="error" id="emailError"></div>
                 </div>
+                <!-- Tombol submit -->
                 <button type="submit" id="submitButton">Submit</button>
+                <!-- Pesan sukses setelah submit -->
                 <div id="successMessage" class="success"></div>
             </form>
         </div>

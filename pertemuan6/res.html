@@ -5,41 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Result</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Background gambar untuk seluruh halaman */
+        body {
+            background-image: url('https://images3.alphacoders.com/131/thumb-1920-1319293.jpeg');
+            background-size: cover; /* Biar gambar nge-full cover layar */
+            background-position: center; /* Biar gambar center */
+            background-repeat: no-repeat; /* Jangan sampe gambar diulang */
+            font-family: Arial, sans-serif; /* Font yang dipakai */
+            color: #000000; /* Warna teks default */
+            margin: 0; /* Hilangkan margin default */
+            padding: 0; /* Hilangkan padding default */
+        }
+        
+        /* Styling untuk container hasil form */
+        .container {
+            display: flex;
+            flex-direction: column; /* Tata layout secara vertikal */
+            align-items: center; /* Biar semua konten center horizontal */
+            justify-content: center; /* Biar semua konten center vertical */
+            height: 100vh; /* Tinggi container 100% viewport */
+            background: rgba(59, 58, 58, 0.9); /* Background putih dengan opacity */
+            padding: 20px; /* Spasi di dalam container */
+            border-radius: 8px; /* Biar sudut-sudut container melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow untuk efek 3D */
+            width: 100%; /* Lebar container 100% dari viewport */
+            max-width: 800px; /* Lebar maksimal container */
+        }
+
+        /* Styling untuk tabel hasil form */
+        .result-table {
+            width: 100%;
+            border-collapse: collapse; /* Gabungkan border tabel */
+            margin-top: 20px; /* Spasi atas tabel */
+        }
+
+        .result-table th, .result-table td {
+            padding: 10px 15px; /* Spasi dalam sel tabel */
+            border: 1px solid #585757; /* Border tabel abu-abu muda */
+            text-align: left; /* Teks rata kiri */
+        }
+
+        .result-table th {
+            background-color: #ffffff5d; /* Warna latar belakang header tabel */
+            font-weight: bold; /* Tebalkan font header */
+        }
+
+        .result-table td {
+            background-color: #ffffff5d; /* Warna latar belakang sel tabel */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h2>Form Result</h2>
-        <div class="form-group">
-            <label>Nama:</label>
-            <span id="resultName"></span>
-        </div>
-        <div class="form-group">
-            <label>Alamat:</label>
-            <span id="resultAddress"></span>
-        </div>
-        <div class="form-group">
-            <label>Kode Pos:</label>
-            <span id="resultPostalCode"></span>
-        </div>
-        <div class="form-group">
-            <label>Jenis Kelamin:</label>
-            <span id="resultGender"></span>
-        </div>
-        <div class="form-group">
-            <label>Username:</label>
-            <span id="resultUsername"></span>
-        </div>
-        <div class="form-group">
-            <label>Password:</label>
-            <span id="resultPassword"></span>
-        </div>
-        <div class="form-group">
-            <label>Email:</label>
-            <span id="resultEmail"></span>
-        </div>
+        <table class="result-table">
+            <tbody>
+                <tr>
+                    <th>Nama:</th>
+                    <td id="resultName"></td>
+                </tr>
+                <tr>
+                    <th>Alamat:</th>
+                    <td id="resultAddress"></td>
+                </tr>
+                <tr>
+                    <th>Kode Pos:</th>
+                    <td id="resultPostalCode"></td>
+                </tr>
+                <tr>
+                    <th>Jenis Kelamin:</th>
+                    <td id="resultGender"></td>
+                </tr>
+                <tr>
+                    <th>Username:</th>
+                    <td id="resultUsername"></td>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td id="resultPassword"></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td id="resultEmail"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script>
+        // Ambil parameter dari URL dan tampilkan di elemen yang sesuai
         document.getElementById('resultName').textContent = new URLSearchParams(window.location.search).get('name');
         document.getElementById('resultAddress').textContent = new URLSearchParams(window.location.search).get('address');
         document.getElementById('resultPostalCode').textContent = new URLSearchParams(window.location.search).get('postalCode');
-        document.getElementById('resultGender').textContent = new URLSearchParams(window.location.search).get
+        document.getElementById('resultGender').textContent = new URLSearchParams(window.location.search).get('gender');
+        document.getElementById('resultUsername').textContent = new URLSearchParams(window.location.search).get('username');
+        document.getElementById('resultPassword').textContent = new URLSearchParams(window.location.search).get('password');
+        document.getElementById('resultEmail').textContent = new URLSearchParams(window.location.search).get('email');
+    </script>
+</body>
+</html>
