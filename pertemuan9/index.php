@@ -31,18 +31,18 @@
        <center> <h1>Materi PHP</h1> </center><br>
         
         <h2>1. Variabel PHP</h2>
-        <p>Variabel dalam PHP diawali dengan tanda <code>$</code>. Berikut adalah contohnya:</p>
+        <p>Di PHP, variabel dimulai dengan tanda <code>$</code>. Berikut contohnya:</p>
         <div class="code">
             <code>
                 &lt;?php<br>
-                $nama = "John";<br>
-                $umur = 25;<br>
+                $nama = "Jaya";<br>
+                $umur = 18;<br>
                 echo "Nama: " . $nama . ", Umur: " . $umur;<br>
                 ?&gt;
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $nama = "John";
@@ -53,7 +53,7 @@
         </div>
 
         <h2>2. Penerapan Konstanta dan Tipe Variabel PHP</h2>
-        <p>Konstanta adalah nilai yang tidak bisa diubah setelah didefinisikan. Tipe variabel dalam PHP meliputi integer, float, string, dan boolean.</p>
+        <p>Konstanta itu nilai yang nggak bisa diubah setelah didefinisikan. Tipe variabel di PHP itu ada integer, float, string, dan boolean.</p>
         <div class="code">
             <code>
                 &lt;?php<br>
@@ -67,7 +67,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 define("PI", 3.14);
@@ -81,24 +81,24 @@
         </div>
 
         <h2>3. Komentar dalam PHP</h2>
-        <p>Komentar digunakan untuk menambahkan catatan dalam kode. PHP mendukung komentar satu baris dan beberapa baris.</p>
+        <p>Komentar dipakai untuk nambahin catatan di kode. PHP bisa pakai komentar satu baris atau beberapa baris.</p>
         <div class="code">
             <code>
                 &lt;?php<br>
-                // Ini adalah komentar satu baris<br>
+                // Ini komentar satu baris<br>
                 /*<br>
-                Ini adalah komentar<br>
+                Ini komentar<br>
                 beberapa baris<br>
                 */<br>
                 ?&gt;
             </code>
         </div>
         <div class="result">
-            <p>Komentar tidak mempengaruhi hasil output.</p>
+            <p>Komentar ini nggak ngaruh ke hasil output.</p>
         </div>
 
         <h2>4. Operator</h2>
-        <p>PHP mendukung berbagai macam operator yang dikelompokkan ke dalam beberapa kategori:</p>
+        <p>PHP mendukung banyak operator yang dikelompokkan dalam beberapa kategori:</p>
         
         <h3>4.1 Operator Aritmatika</h3>
         <div class="code">
@@ -115,7 +115,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $a = 10;
@@ -140,7 +140,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $a = 10;
@@ -166,7 +166,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $a = 10;
@@ -194,7 +194,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $x = true;
@@ -219,7 +219,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $a = 10;
@@ -235,14 +235,14 @@
         <div class="code">
             <code>
                 &lt;?php<br>
-                $a = "Halo";<br>
-                $b = "Dunia";<br>
+                $a = "JAWA";<br>
+                $b = "NICH";<br>
                 echo $a . " " . $b; // Penggabungan String<br>
                 ?&gt;
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 $a = "Halo";
@@ -253,7 +253,7 @@
         </div>
 
         <h2>5. Escape Character</h2>
-        <p>Escape character digunakan untuk menyisipkan karakter spesial dalam string.</p>
+        <p>Escape character dipakai buat masukin karakter spesial di string.</p>
         <div class="code">
             <code>
                 &lt;?php<br>
@@ -264,7 +264,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 echo "Ini adalah tanda kutip: \"<br>";
@@ -275,7 +275,7 @@
         </div>
 
         <h2>6. Spesial Character</h2>
-        <p>Spesial character dalam string termasuk newline (\n), tab (\t), dan sebagainya.</p>
+        <p>Spesial character dalam string itu termasuk newline (\n), tab (\t), dan lain-lain.</p>
         <div class="code">
             <code>
                 &lt;?php<br>
@@ -285,7 +285,7 @@
             </code>
         </div>
         <div class="result">
-            <p>Hasil:</p>
+            <p>Hasilnya:</p>
             <p>
                 <?php
                 echo nl2br("Baris pertama\nBaris kedua"); // Newline
